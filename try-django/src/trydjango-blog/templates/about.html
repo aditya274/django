@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1> About </h1>
+  <p>We are a group of enthusiastic dragon slayers.</p>
+
+  <p>
+    {{ my_text }}, {{ my_number }}
+  </p>
+<ul>
+  {% for abc in my_list %}
+    {% if abc == 123 %}
+    <li>{{ forloop.counter }} - {{ abc|add:22 }}</li>
+    {% elif abc == 'tomato' %}
+    <li>{{ forloop.counter }} - This is incorrect</li>
+    {% else %}
+    <li>{{ forloop.counter }} - {{ abc }}</li>
+    {% endif %}
+  {% endfor %}
+</ul>
+{% endblock content %}
