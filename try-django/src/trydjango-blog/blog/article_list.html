@@ -1,9 +1,0 @@
-{% extends "base.html" %}
-{% block content %}
-
-{% for instance in object_list %}
-<h1 style="padding:50px">List of Articles</h1>
-<hr align="left" width="50%">
-  <h2 style="padding-left:100px;padding-right=100px">{{ instance.id }} - <a href='{{ instance.get_absolute_url }}'>{{instance.title}}</a></h2>
-{% endfor %}
-{% endblock %}
