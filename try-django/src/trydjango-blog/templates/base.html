@@ -3,7 +3,8 @@
 <head>
 </head>
 <title>Welcome to the Dungeons of Dragons</title>
-<body>
+{% load static %}
+<body background = "{% static 'email-pattern.png' %}">
   <center>{% include 'navbar.html' %}</center>
   {% block content %}
   this gets replaced
